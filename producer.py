@@ -8,5 +8,5 @@ producer = KafkaProducer(
 for j in range(9999):
     print("Iteration", j)
     data = {'counter': j}
-    producer.send('topic_test', value=data)
+    producer.send('topic_valencia', value=data)
     sleep(0.5)

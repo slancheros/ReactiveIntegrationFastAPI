@@ -1,5 +1,7 @@
 import asyncio
 import json
+import uvicorn
+import os
 
 from aiokafka import AIOKafkaConsumer, AIOKafkaProducer
 from fastapi import FastAPI
@@ -80,3 +82,5 @@ async def kafka_produce(msg: ProducerMessage, topicname: str):
 
     return response
 
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=int(os.environ.get('PORT', 8004)), log_level="info")

@@ -14,3 +14,4 @@ for event in consumer:
     # Do whatever you want
     print(f'Consuming ...{event_data}')
     sleep(2)
+  
